@@ -1,4 +1,4 @@
-# Ensemble Forecasts for Wildfire Smoke
+# Wildfire Smoke Forecast- Smoke Plume Data Processing
 
 [![Documentation Status](https://readthedocs.org/projects/smoke/badge/?version=latest)](https://smoke.readthedocs.io/en/latest/?badge=latest)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
