@@ -1,0 +1,25 @@
+# Output directory for animations
+output_directory: 'D:\\animations\\bluesky'
+
+# FTSG directory to test all FTSGs from
+ftsg_test_directory: 'D:\\test_save'
+ftsg_keyword: 'bluesky_closest'
+
+# Original data directory which was used to make FTSGs
+original_data_directory: 'D:\\bluesky_data'
+
+# Configuration options on data window size and location relative to
+# start of ftsg
+data_window_end_from_FTSG_start_h: -1
+data_window_size_h: 18
+
+# Which Cleaner you are testing (Which cleaner was used for FTSGs)
+# only select one
+currently_testing:
+    firework: False
+    bluesky: True
+    modisAOD: False
+    modisFRP: False
+
+# (Optional) Feature index to check most have one so just uses default 0
+feature_index: 0

@@ -1,0 +1,86 @@
+# Threads for multiprocessing
+threads: 14
+
+# Grid Resolution settings
+grid_res_km: 5
+
+# Date range to run cleaners across ISO 8601 date format
+timerange:
+  start: "2018-01-01"
+  stop: "2019-12-31"
+
+# Firework Parameters
+firework:
+  run: False
+  file_directory: "/projects/smoke_downloads/firework"
+  output_directory: "/projects/new_cleaned_ftsgs/firework"
+  grid_time_res_h: 1
+  # stand at T-01:00 relative to grid
+  time_we_at_stand_before_grid_h: -1
+
+  first_closest:
+    run: True
+    file_prefix: "firework_closest_"
+    # From T-13:00 to T-01:00
+    data_window_size_h: 11
+    data_window_end_n_hours_before_standing: 0
+
+  second_closest:
+    run: False
+    file_prefix: "firework_2ndclosest_"
+    # From T-25:00 to T-13:00
+    data_window_size_h: 12
+    data_window_end_n_hours_before_standing: 12
+
+  # Only 2020 Forward will have stuff 72 hours out, so only 2020 forward would
+  # need third and fourth closest
+  third_closest:
+    run: False
+    file_prefix: "firework_3rdclosest_"
+    # From T-37:00 to T-25:00
+    data_window_size_h: 12
+    data_window_end_n_hours_before_standing: 24
+
+  fourth_closest:
+    run: False
+    file_prefix: "firework_4thclosest_"
+    # From T-49:00 to T-37:00
+    data_window_size_h: 12
+    data_window_end_n_hours_before_standing: 36
+
+# BlueSky Parameters
+bluesky:
+  run: False
+  file_directory: "/projects/smoke_downloads/bluesky"
+  output_directory: "/projects/new_cleaned_ftsgs/bluesky"
+  grid_time_res_h: 1
+  # stand at T-01:00 relative to grid
+  time_we_at_stand_before_grid_h: -1
+
+  first_closest:
+    run: True
+    file_prefix: "bluesky_closest_"
+    # From T-25:00 to T-01:00
+    data_window_size_h: 11
+    data_window_end_n_hours_before_standing: 0
+
+  second_closest:
+    run: False
+    file_prefix: "bluesky_2ndclosest_"
+    # From T-49:00 to T-25:00
+    data_window_size_h: 24
+    data_window_end_n_hours_before_standing: 24
+
+# MODISAOD Parameters
+modisAOD:
+  run: False
+  file_directory: "D:\\modisaod_data"
+  output_directory: "D:\\test_save"
+  grid_time_res_h: 6
+
+# MODISFRP Parameters
+modisFRP:
+  run: True
+  file_directory: "/projects/smoke_downloads/split_modisFRP"
+  output_directory: "/projects/new_cleaned_ftsgs/modisFRP"
+  grid_time_res_h: 1

@@ -1,0 +1,29 @@
+# Prediction time, time range specifications. Torch tensor creation will be
+# attempted for every time created by time range specified by specifications
+datetime_start_ISO8601: "2018-01-01T00:00:00"
+datetime_stop_ISO8601: "2020-01-01T00:00:00"
+time_resolution_h: 1
+
+# Dataset file directories
+pm25_labels_folder: "/projects/pm25_labels"
+firework_ftsg_folder: "/projects/new_cleaned_ftsgs/firework"
+bluesky_ftsg_folder: "/projects/new_cleaned_ftsgs/bluesky"
+modisaod_ftsg_folder: "/projects/new_cleaned_ftsgs/modisAOD"
+modisfrp_ftsg_folder: "/projects/new_cleaned_ftsgs/modisFRP"
+noaa_grid_folder: ''
+
+# Which prediction datasets to use in tensors
+# Firework
+firework: True
+firework_2ndclosest: False
+firework_3rdclosest: False
+firework_4thclosest: False
+# Bluesky
+bluesky: True
+bluesky_2ndclosest: False
+# MODIS AOD
+modisAOD: False
+# MODIS FRP
+modisFRP: True
+# NOAA Smoke Plumes
+NOAA: False
